@@ -1,0 +1,36 @@
+query Products($first: Int) {
+  products(first: $first) {
+    node {
+      description
+      name
+      path
+      sku
+      brand {
+        name
+      }
+      addToCartUrl
+      categories {
+        edges {
+          node {
+            name
+          }
+        }
+      }
+      id
+      availability
+      defaultImage {
+        urlOriginal
+      }
+      images {
+        edges {
+          node {
+            urlOriginal
+          }
+        }
+      }
+      inventory {
+        isInStock
+      }
+    }
+  }
+}

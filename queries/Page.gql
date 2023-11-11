@@ -1,0 +1,57 @@
+query Page($slug: String!) {
+  page(where: { slug: $slug }) {
+    slug
+    title
+    description
+    image
+    components {
+      ... on Editorial {
+        components {
+          ... on Card {
+            component
+            cta
+            image
+            title
+            url
+          }
+          ... on Cta {
+            component
+            chapeau
+            cta
+            description
+            title
+            url
+          }
+        }
+        image
+        component
+      }
+      ... on Hero {
+        component
+        description
+        image
+        title
+      }
+      ... on ProductHighlight {
+        component
+        description
+        cta
+        image
+        product
+        theme
+        title
+        url
+        variant
+      }
+      ... on Routine {
+        component
+        chapeau
+        cta
+        description
+        image
+        title
+        url
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+query Categories {
+  categories {
+    name
+    path
+    description
+    image {
+      urlOriginal
+    }
+    productCount
+  }
+}

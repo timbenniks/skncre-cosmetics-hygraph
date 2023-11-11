@@ -1,0 +1,48 @@
+query Product($entityId: Int!) {
+  productById(entityId: $entityId) {
+    description
+    name
+    path
+    sku
+    brand {
+      name
+    }
+    addToCartUrl
+    categories {
+      edges {
+        node {
+          name
+        }
+      }
+    }
+    id
+    availability
+    defaultImage {
+      urlOriginal
+    }
+    images {
+      edges {
+        node {
+          urlOriginal
+        }
+      }
+    }
+    inventory {
+      isInStock
+    }
+    variants {
+      edges {
+        node {
+          sku
+          id
+          entityId
+          prices(includeTax: true) {
+            price {
+              formatted
+            }
+          }
+        }
+      }
+    }
+  }
+}
