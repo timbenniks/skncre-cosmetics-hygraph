@@ -1,18 +1,15 @@
 <script setup>
-// props
-// image
-// title
-// description
-</script>
-<template>
-  <section class="md:aspect-[1440/632] relative">
-    <img
-      srcset="
+const image = ref(`
         https://res.cloudinary.com/dwfcofnrd/image/upload/q_auto,f_auto,ar_1440:632,c_fill,w_1000/machathon2022/hero-image.jpg 1000w,
         https://res.cloudinary.com/dwfcofnrd/image/upload/q_auto,f_auto,ar_1440:632,c_fill,w_1280/machathon2022/hero-image.jpg 1280w,
         https://res.cloudinary.com/dwfcofnrd/image/upload/q_auto,f_auto,ar_1440:632,c_fill,w_1440/machathon2022/hero-image.jpg 1440w,
         https://res.cloudinary.com/dwfcofnrd/image/upload/q_auto,f_auto,ar_1440:632,c_fill,w_2880/machathon2022/hero-image.jpg 2880w
-      "
+      `);
+</script>
+<template>
+  <section class="md:aspect-[1440/632] relative">
+    <img
+      :srcset="image"
       alt=""
       class="md:absolute"
       width="2880"

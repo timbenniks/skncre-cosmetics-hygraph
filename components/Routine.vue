@@ -1,25 +1,14 @@
 <script setup>
-// props
-// image
-// chapeau
-// title
-// description
-// cta
-// url
-</script>
-<template>
-  <section class="py-16 relative bg-light">
-    <img
-      class="lg:w-2/4"
-      srcset="
-        https://res.cloudinary.com/dwfcofnrd/image/upload/q_auto,f_auto,ar_805:535,c_fill,w_400/machathon2022/3.png   400w,
+const image = ref(`
+https://res.cloudinary.com/dwfcofnrd/image/upload/q_auto,f_auto,ar_805:535,c_fill,w_400/machathon2022/3.png   400w,
         https://res.cloudinary.com/dwfcofnrd/image/upload/q_auto,f_auto,ar_805:535,c_fill,w_900/machathon2022/3.png   900w,
         https://res.cloudinary.com/dwfcofnrd/image/upload/q_auto,f_auto,ar_805:535,c_fill,w_1280/machathon2022/3.png 1280w
-      "
-      alt=""
-      width="5810"
-      height="3863"
-    />
+      `);
+</script>
+
+<template>
+  <section class="py-16 relative bg-light">
+    <img class="lg:w-2/4" :srcset="image" alt="" width="5810" height="3863" />
     <div
       class="w-full bg-tertiary p-8 lg:max-w-2xl lg:absolute top-32 right-32"
     >

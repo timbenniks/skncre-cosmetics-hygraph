@@ -1,11 +1,15 @@
+<script setup>
+const image = ref(`
+https://res.cloudinary.com/dwfcofnrd/image/upload/q_auto,f_auto,ar_1440:978,c_fill,w_400/machathon2022/serum-tutorial.jpg   400w,
+        https://res.cloudinary.com/dwfcofnrd/image/upload/q_auto,f_auto,ar_1440:978,c_fill,w_900/machathon2022/serum-tutorial.jpg   900w,
+        https://res.cloudinary.com/dwfcofnrd/image/upload/q_auto,f_auto,ar_1440:978,c_fill,w_1280/machathon2022/serum-tutorial.jpg 1280w
+      `);
+</script>
+
 <template>
   <section class="relative">
     <img
-      srcset="
-        https://res.cloudinary.com/dwfcofnrd/image/upload/q_auto,f_auto,ar_1440:978,c_fill,w_400/machathon2022/serum-tutorial.jpg   400w,
-        https://res.cloudinary.com/dwfcofnrd/image/upload/q_auto,f_auto,ar_1440:978,c_fill,w_900/machathon2022/serum-tutorial.jpg   900w,
-        https://res.cloudinary.com/dwfcofnrd/image/upload/q_auto,f_auto,ar_1440:978,c_fill,w_1280/machathon2022/serum-tutorial.jpg 1280w
-      "
+      :srcset="image"
       alt=""
       width="2880"
       height="1956"
@@ -18,7 +22,7 @@
           class="grid mb-12 items-center"
           style="grid-template-columns: 1fr 5fr"
         >
-          <span class="text-6xl font-bold font-title">1<!-- -->.</span
+          <span class="text-6xl font-bold font-title">1.</span
           ><span class="text-md"
             >apply a little of the product to your index finger.</span
           >
@@ -27,7 +31,7 @@
           class="grid mb-12 items-center"
           style="grid-template-columns: 1fr 5fr"
         >
-          <span class="text-6xl font-bold font-title">2<!-- -->.</span
+          <span class="text-6xl font-bold font-title">2.</span
           ><span class="text-md"
             >apply small amounts to the lower part of the eye.</span
           >
@@ -36,7 +40,7 @@
           class="grid mb-12 items-center"
           style="grid-template-columns: 1fr 5fr"
         >
-          <span class="text-6xl font-bold font-title">3<!-- -->.</span
+          <span class="text-6xl font-bold font-title">3.</span
           ><span class="text-md"
             >spread the product from the tear duct to the outside following the
             eye contour.</span
@@ -46,7 +50,7 @@
           class="grid mb-12 items-center"
           style="grid-template-columns: 1fr 5fr"
         >
-          <span class="text-6xl font-bold font-title">4<!-- -->.</span
+          <span class="text-6xl font-bold font-title">4.</span
           ><span class="text-md"
             >to eliminate small wrinkles, work from the outside of the eye to
             the tear duct.</span

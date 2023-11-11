@@ -1,6 +1,9 @@
 <script setup>
-// props
-// image
+const image = ref(`
+https://res.cloudinary.com/dwfcofnrd/image/upload/q_auto,f_auto,ar_672:1106,c_fill,w_672/machathon2022/5.png   672w,
+        https://res.cloudinary.com/dwfcofnrd/image/upload/q_auto,f_auto,ar_672:1106,c_fill,w_872/machathon2022/5.png   872w,
+        https://res.cloudinary.com/dwfcofnrd/image/upload/q_auto,f_auto,ar_672:1106,c_fill,w_1072/machathon2022/5.png 1072w
+      `);
 </script>
 <template>
   <section
@@ -12,11 +15,7 @@
     </div>
 
     <img
-      srcset="
-        https://res.cloudinary.com/dwfcofnrd/image/upload/q_auto,f_auto,ar_672:1106,c_fill,w_672/machathon2022/5.png   672w,
-        https://res.cloudinary.com/dwfcofnrd/image/upload/q_auto,f_auto,ar_672:1106,c_fill,w_872/machathon2022/5.png   872w,
-        https://res.cloudinary.com/dwfcofnrd/image/upload/q_auto,f_auto,ar_672:1106,c_fill,w_1072/machathon2022/5.png 1072w
-      "
+      :srcset="image"
       alt=""
       width="4000"
       height="6016"

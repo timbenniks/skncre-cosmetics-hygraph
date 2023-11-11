@@ -1,20 +1,15 @@
 <script setup>
-// props
-// image
-// variant (imageLeft, imageRight)
-// theme (light, dark)
-// url
-// cta
+const image = ref(`
+        https://res.cloudinary.com/dwfcofnrd/image/upload/q_auto,f_auto,ar_1440:722,c_fill,w_1280/machathon2022/img.jpg 1280w,
+        https://res.cloudinary.com/dwfcofnrd/image/upload/q_auto,f_auto,ar_1440:722,c_fill,w_1440/machathon2022/img.jpg 1440w,
+        https://res.cloudinary.com/dwfcofnrd/image/upload/q_auto,f_auto,ar_1440:722,c_fill,w_1600/machathon2022/img.jpg 1600w
+      `);
 </script>
 
 <template>
   <section class="md:aspect-[1440/722] relative">
     <img
-      srcset="
-        https://res.cloudinary.com/dwfcofnrd/image/upload/q_auto,f_auto,ar_1440:722,c_fill,w_1280/machathon2022/img.jpg 1280w,
-        https://res.cloudinary.com/dwfcofnrd/image/upload/q_auto,f_auto,ar_1440:722,c_fill,w_1440/machathon2022/img.jpg 1440w,
-        https://res.cloudinary.com/dwfcofnrd/image/upload/q_auto,f_auto,ar_1440:722,c_fill,w_1600/machathon2022/img.jpg 1600w
-      "
+      :srcset="image"
       alt=""
       width="2880"
       height="1446"
