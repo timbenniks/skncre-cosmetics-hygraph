@@ -1,0 +1,33 @@
+query ProductPage($slug: String!) {
+  pdp(where: { slug: $slug }) {
+    slug
+    title
+    description
+    image
+    components {
+      ... on Tutorial {
+        __typename
+        title
+        image
+        items {
+          __typename
+          text
+        }
+      }
+      ... on Routine {
+        __typename
+        chapeau
+        cta
+        description
+        image
+        title
+        url
+      }
+      ... on ProductList {
+        __typename
+        title
+        products
+      }
+    }
+  }
+}

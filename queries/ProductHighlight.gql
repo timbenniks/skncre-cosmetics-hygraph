@@ -1,0 +1,11 @@
+query ProductHighlight($entityId: Int!) {
+  productById(entityId: $entityId) {
+    id
+    description
+    name
+    path
+    seo {
+      metaDescription
+    }
+  }
+}

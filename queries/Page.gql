@@ -6,16 +6,21 @@ query Page($slug: String!) {
     image
     components {
       ... on Editorial {
+        id
+        __typename
+        image
         components {
           ... on Card {
-            component
+            id
+            __typename
             cta
             image
             title
             url
           }
           ... on Cta {
-            component
+            id
+            __typename
             chapeau
             cta
             description
@@ -23,17 +28,17 @@ query Page($slug: String!) {
             url
           }
         }
-        image
-        component
       }
       ... on Hero {
-        component
+        id
+        __typename
         description
         image
         title
       }
       ... on ProductHighlight {
-        component
+        id
+        __typename
         description
         cta
         image
@@ -44,7 +49,8 @@ query Page($slug: String!) {
         variant
       }
       ... on Routine {
-        component
+        id
+        __typename
         chapeau
         cta
         description
