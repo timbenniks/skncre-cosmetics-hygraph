@@ -4,7 +4,8 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/tailwindcss', 'nuxt-graphql-client', '@nuxtjs/google-fonts', '@nuxt/image'],
 
   routeRules: {
-    '/*': { isr: true },
+    '/': { isr: true },
+    '/pdp/*': { isr: true },
   },
 
   googleFonts: {
