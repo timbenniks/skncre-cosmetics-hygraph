@@ -1,5 +1,5 @@
-query Page($slug: String!) {
-  page(where: { slug: $slug }) {
+query Page($slug: String!, $stage: Stage! = PUBLISHED) {
+  page(where: { slug: $slug }, stage: $stage) {
     slug
     title
     description

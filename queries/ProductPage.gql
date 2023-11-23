@@ -1,5 +1,5 @@
-query ProductPage($slug: String!) {
-  pdp(where: { slug: $slug }) {
+query ProductPage($slug: String!, $stage: Stage! = PUBLISHED) {
+  pdp(where: { slug: $slug }, stage: $stage) {
     slug
     title
     description
