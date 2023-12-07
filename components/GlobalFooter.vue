@@ -16,10 +16,10 @@
       </div>
 
       <nav class="flex flex-wrap gap-x-6 gap-y-2 items-center md:text-xl">
-        <a href="/pdp/face-serum/112">face serum</a
-        ><a href="/pdp/face-serum/112">face cream</a
-        ><a href="/pdp/face-serum/112">eye contour</a
-        ><a href="/pdp/face-serum/112">skncre bundle</a>
+        <a href="/pdp/face-serum">face serum</a
+        ><a href="/pdp/face-cream">face cream</a
+        ><a href="/pdp/eye-contour">eye contour</a
+        ><a href="/pdp/bundle">skncre bundle</a>
       </nav>
     </div>
   </footer>
