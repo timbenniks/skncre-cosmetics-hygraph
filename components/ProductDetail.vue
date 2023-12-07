@@ -5,9 +5,9 @@ defineProps(["product"]);
   <section class="bg-light product-detail pb-12">
     <div class="grid grid-cols-2">
       <img
-        v-for="image in product.images.edges"
-        :src="`https://res.cloudinary.com/dwfcofnrd/image/fetch/c_fill,ar_1:1,q_auto,f_auto/${image.node.urlOriginal}`"
-        :alt="product.name"
+        v-for="image in product.images"
+        :src="`https://res.cloudinary.com/dwfcofnrd/image/fetch/c_fill,ar_1:1,q_auto,f_auto/${image.url}`"
+        :alt="image.alt"
         class="aspect-[1/1] object-cover"
       />
     </div>
@@ -23,12 +23,8 @@ defineProps(["product"]);
         </h1>
       </div>
       <div class="bg-tertiary p-8 md:-mt-12 w-full md:w-2/4">
-        <p class="text-5xl font-bold font-title mb-4">
-          {{ product.variants.edges[0].node.prices.price.formatted }}
-        </p>
-        <a :href="product.addToCartUrl" class="cta" target="_blank"
-          >add to cart</a
-        >
+        <p class="text-5xl font-bold font-title mb-4">${{ product.price }}</p>
+        <a href="#" class="cta" target="_blank">add to cart</a>
       </div>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mx-8 md:mx-16">
@@ -38,11 +34,7 @@ defineProps(["product"]);
       </div>
       <div class="pl-2">
         <h3 class="text-3xl font-bold font-title mb-4">ingredients</h3>
-        <article>
-          snail slime, benzyl salicylate, hydroxyethylpiperazine ethane sulfonic
-          acid, triethanolamine, snail slime, benzyl salicylate,
-          hydroxyethylpiperazine ethane sulfonic acid, triethanolamine.
-        </article>
+        <article v-html="product.ingredients" />
       </div>
     </div>
   </section>

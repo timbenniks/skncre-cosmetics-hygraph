@@ -8,15 +8,9 @@
           <a href="/">skncre</a>
         </span>
         <span class="text-md">
-          Powered by
+          By
           <a class="underline" href="https://hygraph.com" target="_blank"
             >Hygraph</a
-          >,
-          <a class="underline" href="https://bigcommerce.com" target="_blank"
-            >BigCommerce</a
-          >, and
-          <a class="underline" href="https://cloudinary.com" target="_blank"
-            >Cloudinary</a
           ></span
         >
       </div>

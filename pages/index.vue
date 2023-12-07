@@ -1,8 +1,12 @@
 <script setup lang="ts">
 const page = await usePage({ slug: "home" });
 useOgtags(page);
+// usePfBodySettings("home", "page", page.id);
+
+// const oversiteHelpers = await usePfHelpers();
+// await oversiteHelpers.init("home");
 </script>
 
 <template>
-  <RenderPage slug="home" type="page" />
+  <RenderPage :data="page" />
 </template>

@@ -2,23 +2,27 @@
 import { getComponentForName } from "./componentMapper";
 
 const props = defineProps({
-  slug: {
-    type: String,
-    required: true,
-  },
-  type: {
-    type: String,
+  data: {
+    type: Object,
     required: true,
   },
 });
 
 const page = ref();
 
-if (props.type === "page") {
-  page.value = await usePage({ slug: props.slug });
-} else {
-  page.value = await useProductPage({ slug: props.slug });
-}
+page.value = props.data;
+
+// const oversiteHelpers = await usePfHelpers();
+// const helpers = oversiteHelpers?.instances.get("home");
+// const part = oversiteHelpers?.section.parts(
+//   helpers?.section.parts,
+//   "PageSection"
+// );
+
+// const pf = {
+//   sectionId: 1,
+//   title: "PageSection",
+// };
 </script>
 
 <template>
@@ -27,6 +31,7 @@ if (props.type === "page") {
       v-for="component in page?.components"
       :is="getComponentForName(component?.__typename)"
       :key="(component?.id as string)"
+      :uid="`${component?.__typename}-${component?.id as string}`"
       v-bind="component"
     />
   </section>

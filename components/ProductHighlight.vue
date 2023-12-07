@@ -8,15 +8,32 @@ const props = defineProps([
   "url",
   "cta",
   "product",
+  "uid",
 ]);
 
-const productFromBC = await useProductHighlight({
-  entityId: props.product[0].id,
-});
+// const productFromBC = await useProductHighlight({
+//   entityId: props.product[0].id,
+// });
+
+const oversiteHelpers = await usePfHelpers();
+const helpers = oversiteHelpers?.instances.get("home");
+const selector =
+  helpers?.component.parts("ProductHighlight", props.uid) ||
+  ((selector, classes) => {
+    return classes;
+  });
+
+const pf = {
+  componentKey: "ProductHighlight",
+  title: "Product Highlight",
+  groupId: "PageSection",
+  instanceId: props.uid,
+  providerId: "hygraph",
+};
 </script>
 
 <template>
-  <section class="md:aspect-[1440/722] relative">
+  <section class="md:aspect-[1440/722] relative" :data-pf="JSON.stringify(pf)">
     <NuxtImg
       provider="cloudinary"
       :src="image.public_id"
@@ -38,22 +55,21 @@ const productFromBC = await useProductHighlight({
           >your</span
         ><span
           class="font-bold font-title text-3xl sm:text-4xl md:text-6xl sm:ml-8 sm:-mt-2 block"
-          :class="theme === 'light' ? 'text-light' : 'text-dark'"
-          >{{ productFromBC.title || title }}</span
+          :class="selector('self', 'text-dark')"
+        >
+          <!-- :class="theme === 'light' ? 'text-light' : 'text-dark'" -->
+          {{ title }}</span
         >
       </h2>
+      <!-- :class="theme === 'light' ? 'text-light' : 'text-dark'" -->
+
       <p
         v-if="description"
         class="text-xl ml-8 mb-8"
-        :class="theme === 'light' ? 'text-light' : 'text-dark'"
-        v-html="productFromBC.seo.metaDescription || description"
-      ></p>
-      <a
-        v-if="productFromBC.path || url"
-        class="inline-block cta ml-8"
-        :href="productFromBC.path || url"
-        >{{ cta }}</a
-      >
+        :class="selector('self', 'text-dark')"
+        v-html="description"
+      />
+      <a v-if="url" class="inline-block cta ml-8" :href="url">{{ cta }}</a>
     </div>
   </section>
 </template>

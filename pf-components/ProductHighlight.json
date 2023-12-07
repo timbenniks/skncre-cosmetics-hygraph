@@ -1,0 +1,29 @@
+{
+  "key": "product-highlight",
+  "name": "ProductHighlight",
+  "description": "Highlight a product in a fancy way",
+  "elements": [
+    {
+      "name": "Color variant",
+      "selector": "self",
+      "properties": [
+        {
+          "name": "Text Color",
+          "values": [
+            {
+              "name": "Dark",
+              "value": "text-dark",
+              "display": "#333333"
+            },
+            {
+              "name": "Light",
+              "value": "text-light",
+              "display": "#fff"
+            }
+          ],
+          "ui": "ui-colorgroup"
+        }
+      ]
+    }
+  ]
+}

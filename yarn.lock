@@ -1848,6 +1848,16 @@
     tslib "^2.5.0"
     webcrypto-core "^1.7.7"
 
+"@perfectiondev/oversite-helpers@^1.0.5":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@perfectiondev/oversite-helpers/-/oversite-helpers-1.0.5.tgz#7f6c6c868011aed80cb1268191e6bbd8423927bd"
+  integrity sha512-dw1E5bkCLNPwRH+QVd7zkGyhj4ZnNVOR1WiYX+70OQRFViY0kNnO4acYyxOUWFz7nirSUxTo3vJJv0CYDsrE/w==
+
+"@perfectiondev/oversite@^1.0.58":
+  version "1.0.58"
+  resolved "https://registry.yarnpkg.com/@perfectiondev/oversite/-/oversite-1.0.58.tgz#1619c6f6c176d54aa4c24654bfc26c1e19b0e2b0"
+  integrity sha512-IZSgCniaJ3m16FrQWx4cyP6Xpd+E/t8Ax/buD9S71+bToXG1Q6SAF0qZPPiaSjZ1AZ99oSrT9irsRcYFU48R7w==
+
 "@pkgjs/parseargs@^0.11.0":
   version "0.11.0"
   resolved "https://registry.yarnpkg.com/@pkgjs/parseargs/-/parseargs-0.11.0.tgz#a77ea742fab25775145434eb1d2328cf5013ac33"

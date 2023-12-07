@@ -1,4 +1,4 @@
-query ProductPage($slug: String!, $stage: Stage! = PUBLISHED) {
+query Pdp($slug: String!, $stage: Stage! = PUBLISHED) {
   pdp(where: { slug: $slug }, stage: $stage) {
     slug
     title
@@ -27,6 +27,21 @@ query ProductPage($slug: String!, $stage: Stage! = PUBLISHED) {
         __typename
         title
         products
+      }
+    }
+
+    product {
+      id
+      slug
+      name
+      price
+      ingredients
+      shortDescription
+      description
+      stock
+      images {
+        alt
+        url
       }
     }
   }

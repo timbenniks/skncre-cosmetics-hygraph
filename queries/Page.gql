@@ -1,5 +1,6 @@
 query Page($slug: String!, $stage: Stage! = PUBLISHED) {
   page(where: { slug: $slug }, stage: $stage) {
+    id
     slug
     title
     description
@@ -42,7 +43,6 @@ query Page($slug: String!, $stage: Stage! = PUBLISHED) {
         description
         cta
         image
-        product
         theme
         title
         url

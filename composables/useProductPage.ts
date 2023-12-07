@@ -8,7 +8,7 @@ export async function useProductPage(properties: Props) {
   const { $preview } = useNuxtApp();
   const stage = $preview ? "DRAFT" as Stage : "PUBLISHED" as Stage
 
-  const { pdp } = await GqlProductPage({
+  const { pdp } = await GqlPdp({
     slug: properties.slug, stage
   })
 
