@@ -1,23 +1,39 @@
 import type { Stage } from "#gql/default";
 
 type Props = {
-  slug: string
+  slug: string,
+  type: 'pdp' | 'page'
 }
 
 export async function usePage(properties: Props) {
   const { $preview } = useNuxtApp();
   const stage = $preview ? "DRAFT" as Stage : "PUBLISHED" as Stage
 
-  const { page } = await GqlPage({
-    slug: properties.slug, stage
-  });
+  let result: any;
 
-  if (!page) {
+  if (properties.type === 'page') {
+    const { page } = await GqlPage({
+      slug: properties.slug, stage
+    });
+
+    result = page;
+  }
+
+  if (properties.type === 'pdp') {
+    const { pdp } = await GqlPdp({
+      slug: properties.slug, stage
+    });
+
+    result = pdp;
+  }
+
+
+  if (!result) {
     throw createError({
       statusCode: 404,
       statusMessage: "Page Not Found",
     });
   }
 
-  return page
+  return result
 }

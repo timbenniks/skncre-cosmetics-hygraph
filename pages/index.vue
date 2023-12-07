@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const page = await usePage({ slug: "home" });
+const page = await usePage({ slug: "home", type: "page" });
 useOgtags(page);
 // usePfBodySettings("home", "page", page.id);
 

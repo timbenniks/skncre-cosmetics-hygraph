@@ -1,7 +1,7 @@
 <script setup>
 const route = useRoute();
 const { slug } = route.params;
-const product = await useProductPage({ slug });
+const product = await usePage({ slug, type: "pdp" });
 </script>
 
 <template>
