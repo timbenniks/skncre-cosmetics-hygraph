@@ -1,42 +1,36 @@
-<script setup>
-const props = defineProps([
-  "title",
-  "description",
-  "image",
-  "theme",
-  "variant",
-  "url",
-  "cta",
-  "product",
-  "uid",
-]);
+<script setup lang="ts">
+const props = defineProps(["id", "__typename", "productFocus"]);
 
-// const productFromBC = await useProductHighlight({
-//   entityId: props.product[0].id,
-// });
+// const oversiteHelpers = await usePfHelpers();
+// const helpers = oversiteHelpers?.instances.get("home");
+// const selector =
+//   helpers?.component.parts("ProductHighlight", props.uid) ||
+//   ((selector, classes) => {
+//     return classes;
+//   });
 
-const oversiteHelpers = await usePfHelpers();
-const helpers = oversiteHelpers?.instances.get("home");
-const selector =
-  helpers?.component.parts("ProductHighlight", props.uid) ||
-  ((selector, classes) => {
-    return classes;
-  });
-
-const pf = {
-  componentKey: "ProductHighlight",
-  title: "Product Highlight",
-  groupId: "PageSection",
-  instanceId: props.uid,
-  providerId: "hygraph",
-};
+const variant = ref("imageLeft");
+const theme = ref("dark");
+// const pfData = {
+//   sectionId: props.productFocus?.id as string,
+//   componentKey: props.productFocus?.__typename,
+//   title: `${props.productFocus?.__typename} Component`,
+//   instanceId: `${props.productFocus?.__typename}-${
+//     props.productFocus?.id as string
+//   }`,
+//   providerId: "hygraph",
+//   content_model_id: "0f2b6f20d23d45c58222985ff6fab5a4",
+//   content_view_id: "d5ff2aaf3c394461b61cddb521767985",
+//   entry_id: props.productFocus?.id,
+// };
+// console.log(pfData);
 </script>
 
 <template>
-  <section class="md:aspect-[1440/722] relative" :data-pf="JSON.stringify(pf)">
+  <section class="md:aspect-[1440/722] relative">
     <NuxtImg
       provider="cloudinary"
-      :src="image.public_id"
+      :src="productFocus.image.public_id"
       class="md:absolute md:object-cover"
       width="2880"
       height="1446"
@@ -55,21 +49,24 @@ const pf = {
           >your</span
         ><span
           class="font-bold font-title text-3xl sm:text-4xl md:text-6xl sm:ml-8 sm:-mt-2 block"
-          :class="selector('self', 'text-dark')"
+          :class="theme === 'light' ? 'text-light' : 'text-dark'"
         >
-          <!-- :class="theme === 'light' ? 'text-light' : 'text-dark'" -->
-          {{ title }}</span
+          {{ productFocus.title }}</span
         >
       </h2>
-      <!-- :class="theme === 'light' ? 'text-light' : 'text-dark'" -->
 
       <p
-        v-if="description"
+        v-if="productFocus.description"
         class="text-xl ml-8 mb-8"
-        :class="selector('self', 'text-dark')"
-        v-html="description"
+        v-html="productFocus.description"
+        :class="theme === 'light' ? 'text-light' : 'text-dark'"
       />
-      <a v-if="url" class="inline-block cta ml-8" :href="url">{{ cta }}</a>
+      <a
+        v-if="productFocus.url"
+        class="inline-block cta ml-8"
+        :href="productFocus.url"
+        >{{ productFocus.cta }}</a
+      >
     </div>
   </section>
 </template>

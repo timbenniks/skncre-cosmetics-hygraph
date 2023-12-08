@@ -22,22 +22,36 @@ page.value = props.data;
 const { $pf } = useNuxtApp();
 
 function renderPfData(component: any) {
+  let id = component.id as string;
+  let type = component.__typename;
+  let content_model_id =
+    page.value.__typename === "Page"
+      ? $pf.page_content_model_id
+      : $pf.pdp_content_model_id;
+  let content_view_id =
+    page.value.__typename === "Page"
+      ? $pf.page_content_view_id
+      : $pf.pdp_content_view_id;
+  let entryId = page.value.id;
+
+  if (component.productFocus) {
+    id = component.productFocus.id as string;
+    type = component.productFocus.__typename;
+    content_model_id = "0f2b6f20d23d45c58222985ff6fab5a4";
+    content_view_id = "d5ff2aaf3c394461b61cddb521767985";
+    entryId = component.productFocus.id;
+  }
+
   const pfData = {
-    sectionId: component?.id as string,
-    componentKey: component?.__typename,
-    title: `${component?.__typename} Component`,
+    sectionId: id as string,
+    componentKey: type,
+    title: `${type} Component`,
     groupId: "PageSection",
-    instanceId: `${component?.__typename}-${component?.id as string}`,
+    instanceId: `${type}-${id as string}`,
     providerId: "hygraph",
-    content_model_id:
-      page.value.__typename === "Page"
-        ? $pf.page_content_model_id
-        : $pf.pdp_content_model_id,
-    content_view_id:
-      page.value.__typename === "Page"
-        ? $pf.page_content_view_id
-        : $pf.pdp_content_view_id,
-    entry_id: page.value.id,
+    content_model_id,
+    content_view_id,
+    entry_id: entryId,
   };
 
   return JSON.stringify(pfData);

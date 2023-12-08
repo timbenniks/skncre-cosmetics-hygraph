@@ -41,13 +41,30 @@ query Page($slug: String!, $stage: Stage! = PUBLISHED) {
       ... on ProductHighlight {
         id
         __typename
-        description
-        cta
-        image
-        theme
-        title
-        url
-        variant
+        productFocus {
+          id
+          __typename
+          cta
+          description
+          image
+          productId
+          title
+          url
+          product {
+            description
+            id
+            images {
+              alt
+              url
+            }
+            ingredients
+            price
+            name
+            shortDescription
+            slug
+            stock
+          }
+        }
       }
       ... on Routine {
         id
