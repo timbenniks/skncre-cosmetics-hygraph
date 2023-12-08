@@ -1,5 +1,6 @@
 query Page($slug: String!, $stage: Stage! = PUBLISHED) {
   page(where: { slug: $slug }, stage: $stage) {
+    __typename
     id
     slug
     title

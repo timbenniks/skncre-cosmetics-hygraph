@@ -14,7 +14,7 @@ defineProps(["image", "title", "items"]);
     />
 
     <div class="max-w-2xl px-12 py-24 md:px-24 md:py-36 relative">
-      <h1 class="text-6xl font-bold mb-12">{{ title }}</h1>
+      <h1 class="text-6xl font-bold mb-12 text-primary">{{ title }}</h1>
 
       <ul>
         <component

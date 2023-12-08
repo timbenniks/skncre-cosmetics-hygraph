@@ -19,10 +19,29 @@ page.value = props.data;
 //   "PageSection"
 // );
 
-// const pf = {
-//   sectionId: 1,
-//   title: "PageSection",
-// };
+const { $pf } = useNuxtApp();
+
+function renderPfData(component: any) {
+  const pfData = {
+    sectionId: component?.id as string,
+    componentKey: component?.__typename,
+    title: `${component?.__typename} Component`,
+    groupId: "PageSection",
+    instanceId: `${component?.__typename}-${component?.id as string}`,
+    providerId: "hygraph",
+    content_model_id:
+      page.value.__typename === "Page"
+        ? $pf.page_content_model_id
+        : $pf.pdp_content_model_id,
+    content_view_id:
+      page.value.__typename === "Page"
+        ? $pf.page_content_view_id
+        : $pf.pdp_content_view_id,
+    entry_id: page.value.id,
+  };
+
+  return JSON.stringify(pfData);
+}
 </script>
 
 <template>
@@ -31,8 +50,8 @@ page.value = props.data;
       v-for="component in page?.components"
       :is="getComponentForName(component?.__typename)"
       :key="(component?.id as string)"
-      :uid="`${component?.__typename}-${component?.id as string}`"
       v-bind="component"
+      :data-pf="renderPfData(component)"
     />
   </section>
 </template>

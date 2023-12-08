@@ -29,6 +29,7 @@ export default defineNuxtConfig({
       hygraphPageContentViewId: process.env.NUXT_HYGRAPH_PAGE_CONTENT_VIEW_ID,
       hygraphPdpContentModelId: process.env.NUXT_HYGRAPH_PDP_CONTENT_MODEL_ID,
       hygraphPdpContentViewId: process.env.NUXT_HYGRAPH_PDP_CONTENT_VIEW_ID,
+      pfOn: process.env.PF_ON,
       pfAPI: process.env.PF_API,
       pfSubscription: process.env.PF_SUBSCRIPTION,
       pfSite: process.env.PF_SITE,

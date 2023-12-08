@@ -1,5 +1,7 @@
 query Pdp($slug: String!, $stage: Stage! = PUBLISHED) {
   pdp(where: { slug: $slug }, stage: $stage) {
+    id
+    __typename
     slug
     title
     description
@@ -7,6 +9,7 @@ query Pdp($slug: String!, $stage: Stage! = PUBLISHED) {
     components {
       ... on Tutorial {
         __typename
+        id
         title
         image
         items {
@@ -16,6 +19,7 @@ query Pdp($slug: String!, $stage: Stage! = PUBLISHED) {
       }
       ... on Routine {
         __typename
+        id
         chapeau
         cta
         description
@@ -25,6 +29,7 @@ query Pdp($slug: String!, $stage: Stage! = PUBLISHED) {
       }
       ... on ProductList {
         __typename
+        id
         title
         products
       }
