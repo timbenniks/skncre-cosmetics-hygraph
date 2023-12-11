@@ -14,7 +14,7 @@ const theme = ref("dark");
 </script>
 
 <template>
-  <div>
+  <div class="text-dark">
     <section class="md:aspect-[1440/722] relative">
       <NuxtImg
         provider="cloudinary"
@@ -24,7 +24,7 @@ const theme = ref("dark");
         height="1446"
       />
       <div
-        class="p-8 md:p-0 md:max-w-md lg:max-w-2xl md:absolute md:top-24 lg:top-56"
+        class="lol p-8 md:p-0 md:max-w-md lg:max-w-2xl md:absolute md:top-24 lg:top-56"
         :class="
           variant === 'imageLeft'
             ? 'md:right-16 lg:right-44'
@@ -37,7 +37,6 @@ const theme = ref("dark");
             >your</span
           ><span
             class="font-bold font-title text-3xl sm:text-4xl md:text-6xl sm:ml-8 sm:-mt-2 block"
-            :class="theme === 'light' ? 'text-light' : 'text-dark'"
           >
             {{ productFocus.title }}</span
           >
@@ -47,7 +46,6 @@ const theme = ref("dark");
           v-if="productFocus.description"
           class="text-xl ml-8 mb-8"
           v-html="productFocus.description"
-          :class="theme === 'light' ? 'text-light' : 'text-dark'"
         />
         <a
           v-if="productFocus.url"

@@ -5,7 +5,7 @@
   "elements": [
     {
       "name": "Color",
-      "selector": "h2 > span:last-child",
+      "selector": "self",
       "properties": [
         {
           "name": "Text Color",
@@ -22,6 +22,28 @@
             }
           ],
           "ui": "ui-colorgroup"
+        }
+      ]
+    },
+    {
+      "name": "Image Location",
+      "selector": ".lol",
+      "properties": [
+        {
+          "name": "Image Location",
+          "values": [
+            {
+              "name": "Left",
+              "value": "md:right-16 lg:right-44",
+              "display": "left"
+            },
+            {
+              "name": "Right",
+              "value": "md:left-16 lg:left-44",
+              "display": "Right"
+            }
+          ],
+          "ui": "ui-dropdown"
         }
       ]
     }
