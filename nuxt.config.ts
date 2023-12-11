@@ -19,20 +19,5 @@ export default defineNuxtConfig({
     cloudinary: {
       baseURL: 'https://res.cloudinary.com/dwfcofnrd/image/upload/'
     }
-  },
-
-  runtimeConfig: {
-    public: {
-      hygraphProjectId: process.env.NUXT_HYGRAPH_PROJECT_ID,
-      hygraphEnvironment: process.env.NUXT_HYGRAPH_ENV,
-      hygraphPageContentModelId: process.env.NUXT_HYGRAPH_PAGE_CONTENT_MODEL_ID,
-      hygraphPageContentViewId: process.env.NUXT_HYGRAPH_PAGE_CONTENT_VIEW_ID,
-      hygraphPdpContentModelId: process.env.NUXT_HYGRAPH_PDP_CONTENT_MODEL_ID,
-      hygraphPdpContentViewId: process.env.NUXT_HYGRAPH_PDP_CONTENT_VIEW_ID,
-      pfOn: process.env.PF_ON,
-      pfAPI: process.env.PF_API,
-      pfSubscription: process.env.PF_SUBSCRIPTION,
-      pfSite: process.env.PF_SITE,
-    }
-  },
+  }
 })

@@ -2,7 +2,7 @@
 const route = useRoute();
 const { slug } = route.params;
 
-const page = await usePage({ slug, type: "page" });
+const page = await usePage({ slug: slug as string, type: "page" });
 useOgtags(page);
 </script>
 
