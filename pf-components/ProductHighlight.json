@@ -4,31 +4,21 @@
   "description": "Highlight a product in a fancy way",
   "elements": [
     {
-      "name": "Background Color",
-      "selector": "self",
+      "name": "Color",
+      "selector": "h2 > span:last-child",
       "properties": [
         {
-          "name": "Card Color",
+          "name": "Text Color",
           "values": [
             {
               "name": "Dark",
-              "value": "bg-dark",
+              "value": "text-dark",
               "display": "#333"
             },
             {
-              "name": "Purple",
-              "value": "bg-purple",
-              "display": "#8f6bc8"
-            },
-            {
-              "name": "Orange",
-              "value": "bg-orange",
-              "display": "#CA701C"
-            },
-            {
-              "name": "Green",
-              "value": "bg-green",
-              "display": "#1BBC34"
+              "name": "Light",
+              "value": "text-light",
+              "display": "#f0f0f0"
             }
           ],
           "ui": "ui-colorgroup"
