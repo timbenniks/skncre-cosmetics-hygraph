@@ -43,7 +43,7 @@ function renderPfData(component: any) {
   }
 
   const pfData = {
-    sectionId: id as string,
+    // sectionId: id as string,
     componentKey: type,
     title: `${type} Component`,
     groupId: "PageSection",

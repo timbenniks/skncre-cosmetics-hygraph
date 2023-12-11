@@ -1,24 +1,34 @@
 {
-  "key": "product-highlight",
-  "name": "ProductHighlight",
+  "key": "ProductFocus",
+  "name": "ProductFocus",
   "description": "Highlight a product in a fancy way",
   "elements": [
     {
-      "name": "Color variant",
+      "name": "Background Color",
       "selector": "self",
       "properties": [
         {
-          "name": "Text Color",
+          "name": "Card Color",
           "values": [
             {
               "name": "Dark",
-              "value": "text-dark",
-              "display": "#333333"
+              "value": "bg-dark",
+              "display": "#333"
             },
             {
-              "name": "Light",
-              "value": "text-light",
-              "display": "#fff"
+              "name": "Purple",
+              "value": "bg-purple",
+              "display": "#8f6bc8"
+            },
+            {
+              "name": "Orange",
+              "value": "bg-orange",
+              "display": "#CA701C"
+            },
+            {
+              "name": "Green",
+              "value": "bg-green",
+              "display": "#1BBC34"
             }
           ],
           "ui": "ui-colorgroup"

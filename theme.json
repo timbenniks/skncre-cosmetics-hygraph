@@ -1,36 +1,11 @@
 {
-  "name": "SKNCRE",
-  "description": "Theme for SKNCRE site",
   "key": "SKNCRE",
-  "decorations": [
-    {
-      "name": "Dark",
-      "class": "text-dark"
-    },
-    {
-      "name": "Light",
-      "class": "text-light"
-    },
-    {
-      "name": "Image Left",
-      "class": "md:right-16 lg:right-44"
-    },
-    {
-      "name": "Image Right",
-      "class": "md:left-16 lg:left-44"
-    }
-  ],
+  "name": "SKNCRE Theme",
+  "description": "SKNCRE Theme",
+  "decorations": [],
   "layouts": {
-    "prebuilt": ["col_100", "col_50_50", "grid_2s_1l"],
-    "custom": [
-      {
-        "name": "20:80",
-        "category": "grid",
-        "description": "20% and 80% width",
-        "class": "custom-20-80"
-      }
-    ]
+    "prebuilt": [],
+    "custom": []
   },
-
-  "componentFolders": ["./pf-components/"]
+  "componentFolders": ["./pf-components"]
 }
