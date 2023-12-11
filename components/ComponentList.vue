@@ -46,7 +46,7 @@ function renderPfData(component: any) {
     // sectionId: id as string,
     componentKey: type,
     title: `${type} Component`,
-    groupId: "PageSection",
+    groupId: `${type}`,
     instanceId: `${type}-${id as string}`,
     providerId: "hygraph",
     content_model_id,
