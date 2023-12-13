@@ -6,7 +6,7 @@ defineProps(["product"]);
     <div class="grid grid-cols-2">
       <img
         v-for="image in product.images"
-        :src="`https://res.cloudinary.com/dwfcofnrd/image/fetch/c_fill,ar_1:1,q_auto,f_auto/${image.url}`"
+        :src="`${image.url}`"
         :alt="image.alt"
         class="aspect-[1/1] object-cover"
       />

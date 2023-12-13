@@ -5,11 +5,11 @@ defineProps(["chapeau", "title", "description", "image", "cta", "url"]);
 <template>
   <section class="py-16 relative bg-light">
     <NuxtImg
-      :src="image.public_id"
+      :src="image.url"
       :alt="title"
       width="768"
       height="510"
-      provider="cloudinary"
+      provider="hygraph"
       class="lg:w-2/4"
     />
     <div

@@ -5,18 +5,24 @@ query Page($slug: String!, $stage: Stage! = PUBLISHED) {
     slug
     title
     description
-    image
+    ogImage {
+      url
+    }
     components {
       ... on Editorial {
         id
         __typename
-        image
+        image {
+          url
+        }
         components {
           ... on Card {
             id
             __typename
             cta
-            image
+            image {
+              url
+            }
             title
             url
           }
@@ -35,7 +41,9 @@ query Page($slug: String!, $stage: Stage! = PUBLISHED) {
         id
         __typename
         description
-        image
+        image {
+          url
+        }
         title
       }
       ... on ProductHighlight {
@@ -46,7 +54,9 @@ query Page($slug: String!, $stage: Stage! = PUBLISHED) {
           __typename
           cta
           description
-          image
+          image {
+            url
+          }
           productId
           title
           url
@@ -72,7 +82,9 @@ query Page($slug: String!, $stage: Stage! = PUBLISHED) {
         chapeau
         cta
         description
-        image
+        image {
+          url
+        }
         title
         url
       }

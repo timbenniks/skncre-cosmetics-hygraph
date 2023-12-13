@@ -4,8 +4,8 @@ defineProps(["title", "description", "image"]);
 <template>
   <section class="md:aspect-[1440/632] relative">
     <NuxtImg
-      provider="cloudinary"
-      :src="image.public_id"
+      provider="hygraph"
+      :src="image.url"
       class="md:absolute"
       width="2880"
       height="1264"

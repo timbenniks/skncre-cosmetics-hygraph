@@ -19,11 +19,11 @@ defineProps(["image", "components"]);
       <Card /> -->
     </div>
     <NuxtImg
-      :src="image.public_id"
+      :src="image.url"
       alt=""
       width="1000"
       height="1504"
-      provider="cloudinary"
+      provider="hygraph"
       class="w-full lg:w-2/4 mt-8 lg:mt-0 lg:ml-12 object-cover"
     />
   </section>

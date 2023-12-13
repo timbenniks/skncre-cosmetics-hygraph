@@ -16,8 +16,14 @@ export default defineNuxtConfig({
   },
 
   image: {
-    cloudinary: {
-      baseURL: 'https://res.cloudinary.com/dwfcofnrd/image/upload/'
+    providers: {
+      hygraph: {
+        name: 'hygraph',
+        provider: '~/providers/hygraph.ts',
+        options: {
+          baseurl: "https://media.graphassets.com"
+        }
+      }
     }
   }
 })

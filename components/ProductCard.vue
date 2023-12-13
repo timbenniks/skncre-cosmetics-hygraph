@@ -3,5 +3,5 @@ defineProps(["image", "title", "url", "cta"]);
 </script>
 
 <template>
-  <Card image="image" />
+  <Card :image="image" />
 </template>

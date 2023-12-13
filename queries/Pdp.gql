@@ -5,13 +5,17 @@ query Pdp($slug: String!, $stage: Stage! = PUBLISHED) {
     slug
     title
     description
-    image
+    ogImage {
+      url
+    }
     components {
       ... on Tutorial {
         __typename
         id
         title
-        image
+        image {
+          url
+        }
         items {
           __typename
           text
@@ -23,7 +27,9 @@ query Pdp($slug: String!, $stage: Stage! = PUBLISHED) {
         chapeau
         cta
         description
-        image
+        image {
+          url
+        }
         title
         url
       }

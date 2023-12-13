@@ -5,19 +5,19 @@ defineProps(["image", "title", "url", "cta"]);
   <div class="bg-tertiary aspect-[1/1] relative">
     <a class="block absolute w-full h-full top-0 left-0" :href="url">
       <NuxtImg
-        v-if="image.public_id"
-        :src="image.public_id"
+        v-if="image.url"
+        :src="image.url"
         :alt="title"
         width="500"
         height="500"
-        provider="cloudinary"
+        provider="hygraph"
         class="absolute w-100 h-auto"
         loading="lazy"
       />
 
       <img
         v-else
-        :src="`https://res.cloudinary.com/dwfcofnrd/image/fetch/c_fill,ar_1:1,q_auto,f_auto/${image}`"
+        :src="image"
         :alt="title"
         class="absolute w-100 h-auto"
         loading="lazy"

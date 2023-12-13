@@ -7,8 +7,8 @@ const theme = ref("dark");
 <template>
   <section class="md:aspect-[1440/722] relative">
     <NuxtImg
-      provider="cloudinary"
-      :src="productFocus.image.public_id"
+      provider="hygraph"
+      :src="productFocus.image.url"
       class="md:absolute md:object-cover"
       width="2880"
       height="1446"

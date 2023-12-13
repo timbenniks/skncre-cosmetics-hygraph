@@ -6,8 +6,8 @@ defineProps(["image", "title", "items"]);
 <template>
   <section class="relative">
     <NuxtImg
-      provider="cloudinary"
-      :src="image.public_id"
+      provider="hygraph"
+      :src="image.url"
       class="absolute h-full w-full object-cover"
       width="2880"
       height="1956"
