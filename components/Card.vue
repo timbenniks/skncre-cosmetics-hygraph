@@ -5,9 +5,9 @@ defineProps(["image", "title", "url", "cta"]);
   <div class="bg-tertiary aspect-[1/1] relative">
     <a class="block absolute w-full h-full top-0 left-0" :href="url">
       <NuxtImg
-        v-if="image.url"
+        v-if="image && image.url"
         :src="image.url"
-        :alt="title"
+        :alt="image.alt"
         width="500"
         height="500"
         provider="hygraph"

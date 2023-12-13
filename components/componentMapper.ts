@@ -10,6 +10,7 @@ import Routine from "./Routine.vue"
 import Tutorial from "./Tutorial.vue"
 import Card from "./Card.vue"
 import TutorialItem from "./TutorialItem.vue"
+import ProductList from "./ProductList.vue"
 
 type Mapping = {
   [name: string]: Component
@@ -24,7 +25,8 @@ export const mapping: Mapping = {
   Routine,
   Tutorial,
   Card,
-  TutorialItem
+  TutorialItem,
+  ProductList
 };
 
 export function getComponentForName(name: string) {

@@ -35,9 +35,26 @@ query Pdp($slug: String!, $stage: Stage! = PUBLISHED) {
       }
       ... on ProductList {
         __typename
-        id
         title
-        products
+        relatedProductList {
+          relatedProductId
+          relatedProducts {
+            products {
+              description
+              id
+              images {
+                alt
+                url
+              }
+              ingredients
+              name
+              price
+              shortDescription
+              slug
+              stock
+            }
+          }
+        }
       }
     }
 
