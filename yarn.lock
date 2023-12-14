@@ -1560,7 +1560,7 @@
     which "^3.0.1"
     ws "^8.14.2"
 
-"@nuxt/image@^1.0.0":
+"@nuxt/image@^1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@nuxt/image/-/image-1.1.0.tgz#71726a472e9c4f3332604b56107cff4fc271964c"
   integrity sha512-+zZqsjVfR83UOrChGeaYuWZeLYMkFD0gNY0T6L4W1y4YaRbKNN5iynZJ71Bmg7lcOPRbf5OmSPBTSU0ieYJq4w==
@@ -1686,16 +1686,16 @@
     vite-plugin-checker "^0.6.2"
     vue-bundle-renderer "^2.0.0"
 
-"@nuxtjs/google-fonts@^3.0.2":
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/google-fonts/-/google-fonts-3.1.1.tgz#be4f84a6b133b0d628e6fdf93e6dc75a2eed50ff"
-  integrity sha512-vlBUw2KroO20dmLuLm2kxlb+moaWdphlrXNpTlB6z85djFsaBZ4pmDJSUY63MxI/lnAdDrPbudtnO4ogFNoVqA==
+"@nuxtjs/google-fonts@^3.1.3":
+  version "3.1.3"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/google-fonts/-/google-fonts-3.1.3.tgz#c00d4adaa028b39747783bd61b13b06dffc7c99f"
+  integrity sha512-gHwstHXQKd/r9O2WnQR4UJbi7Rfb9No1/gF4gqP+y18h1DAAZUOYPBF5EAPGjZKgDOW2XbZHP8Rw3oSDTpIT1A==
   dependencies:
     "@nuxt/kit" "^3.8.2"
     google-fonts-helper "^3.4.1"
     pathe "^1.1.1"
 
-"@nuxtjs/tailwindcss@^6.9.4":
+"@nuxtjs/tailwindcss@^6.10.1":
   version "6.10.1"
   resolved "https://registry.yarnpkg.com/@nuxtjs/tailwindcss/-/tailwindcss-6.10.1.tgz#3455802ac85e2d34074159097fa52c8f179009a6"
   integrity sha512-LqOWiKUpCYErQoVTA7HN6QkjOBVGC24AmfgO/csQHRsRp8Bvw7rW+85fZ1cWY4KqlY0Rvx6pwZuOTcyiH31Orw==
@@ -1839,16 +1839,6 @@
     pvtsutils "^1.3.2"
     tslib "^2.5.0"
     webcrypto-core "^1.7.7"
-
-"@perfectiondev/oversite-helpers@^1.0.5":
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/@perfectiondev/oversite-helpers/-/oversite-helpers-1.0.5.tgz#7f6c6c868011aed80cb1268191e6bbd8423927bd"
-  integrity sha512-dw1E5bkCLNPwRH+QVd7zkGyhj4ZnNVOR1WiYX+70OQRFViY0kNnO4acYyxOUWFz7nirSUxTo3vJJv0CYDsrE/w==
-
-"@perfectiondev/oversite@^1.0.61":
-  version "1.0.61"
-  resolved "https://registry.yarnpkg.com/@perfectiondev/oversite/-/oversite-1.0.61.tgz#a9ee49b7aa19760e91156e9f0ec2fe441c78490f"
-  integrity sha512-F/EaeHC/eRAJvT+jWWqkZ5Beoa1996G9qddewd1ntYVlsbpjQoGG03YspioKK5tf2f9IBvTdrZpnkUD5oQa++Q==
 
 "@pkgjs/parseargs@^0.11.0":
   version "0.11.0"
@@ -5889,7 +5879,7 @@ nuxt-graphql-client@^0.2.31:
     ohash "^1.1.2"
     scule "^1.0.0"
 
-nuxt@^3.8.1:
+nuxt@^3.8.2:
   version "3.8.2"
   resolved "https://registry.yarnpkg.com/nuxt/-/nuxt-3.8.2.tgz#6db515d41e7745c725be7f34f692bdeabc53da07"
   integrity sha512-HUAyifmqTs2zcQBGvcby3KNs2pBAk+l7ZbLjD1oCNqQQ+wBuZ1qgLC4Ebu++y4g3o3Y8WAWSvpafbKRLQZziPw==
@@ -6614,11 +6604,6 @@ prebuild-install@^7.1.1:
     simple-get "^4.0.0"
     tar-fs "^2.0.0"
     tunnel-agent "^0.6.0"
-
-prettier-plugin-tailwindcss@^0.5.7:
-  version "0.5.9"
-  resolved "https://registry.yarnpkg.com/prettier-plugin-tailwindcss/-/prettier-plugin-tailwindcss-0.5.9.tgz#fdc2bd95a02b64702ebd2d6c7ddd300198de3cc6"
-  integrity sha512-9x3t1s2Cjbut2QiP+O0mDqV3gLXTe2CgRlQDgucopVkUdw26sQi53p/q4qvGxMLBDfk/dcTV57Aa/zYwz9l8Ew==
 
 pretty-bytes@^6.1.1:
   version "6.1.1"
@@ -8142,7 +8127,7 @@ vue-router@^4.2.5:
   dependencies:
     "@vue/devtools-api" "^6.5.0"
 
-vue@^3.3.8:
+vue@^3.3.11, vue@^3.3.8:
   version "3.3.11"
   resolved "https://registry.yarnpkg.com/vue/-/vue-3.3.11.tgz#898d97025f73cdb5fc4e3ae3fd07a54615232140"
   integrity sha512-d4oBctG92CRO1cQfVBZp6WJAs0n8AK4Xf5fNjQCBeKCvMI1efGQ5E3Alt1slFJS9fZuPcFoiAiqFvQlv1X7t/w==
