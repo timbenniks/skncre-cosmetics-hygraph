@@ -1,23 +1,21 @@
-# Nuxt 3 Minimal Starter
+# SKNCRE a Hygraph cosmetics brand demo
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
 ## Setup
 
-Make sure to install the dependencies:
+## Add GraphQL and Hygraph connections
 
-```bash
-# npm
-npm install
+In `.env` add and make sure to add content viewing permissions in Hygraph API settings
 
-# pnpm
-pnpm install
+```
+GQL_HOST=https://<HYGRAPH_CDN_LOCATION>.cdn.hygraph.com/content/<ID>/master
+```
 
-# yarn
-yarn install
+Add `.gql` query files in the `./queries` folder and use them like this:
 
-# bun
-bun install
+```js
+const { data } = await useAsyncGql("<QUERY_NAME>", { foo: "bar" });
 ```
 
 ## Development Server
@@ -25,17 +23,7 @@ bun install
 Start the development server on `http://localhost:3000`:
 
 ```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
 yarn dev
-
-# bun
-bun run dev
 ```
 
 ## Production
@@ -43,33 +31,7 @@ bun run dev
 Build the application for production:
 
 ```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
 yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
