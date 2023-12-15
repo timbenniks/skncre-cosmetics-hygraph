@@ -11,6 +11,7 @@ defineProps(["title", "description", "image"]);
       height="1264"
       :quality="90"
       sizes="sm:100vw"
+      :alt="title"
     />
 
     <div

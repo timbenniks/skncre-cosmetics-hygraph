@@ -13,6 +13,7 @@ defineProps(["image", "title", "items"]);
       height="1956"
       :quality="90"
       sizes="sm:100vw"
+      :alt="title"
     />
 
     <div class="max-w-2xl px-12 py-24 md:px-24 md:py-36 relative">

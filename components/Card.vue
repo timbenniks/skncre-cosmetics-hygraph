@@ -7,7 +7,7 @@ defineProps(["image", "title", "url", "cta"]);
       <NuxtImg
         v-if="image && image.url"
         :src="image.url"
-        :alt="image.alt"
+        :alt="image.alt || title"
         width="500"
         height="500"
         provider="hygraph"

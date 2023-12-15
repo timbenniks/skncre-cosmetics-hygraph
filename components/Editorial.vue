@@ -14,13 +14,10 @@ defineProps(["image", "components"]);
         :key="(component?.id as string)"
         v-bind="component"
       />
-
-      <!-- <Cta />
-      <Card /> -->
     </div>
     <NuxtImg
       :src="image.url"
-      alt=""
+      alt="Editorial image"
       width="1000"
       height="1504"
       provider="hygraph"

@@ -14,6 +14,7 @@ const theme = ref("dark");
       height="1446"
       :quality="90"
       sizes="sm:50vw"
+      :alt="productFocus.title"
     />
     <div
       class="p-8 md:p-0 md:max-w-md lg:max-w-2xl md:absolute md:top-24 lg:top-56"
