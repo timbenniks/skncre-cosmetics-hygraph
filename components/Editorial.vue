@@ -25,6 +25,8 @@ defineProps(["image", "components"]);
       height="1504"
       provider="hygraph"
       class="w-full lg:w-2/4 mt-8 lg:mt-0 lg:ml-12 object-cover"
+      :quality="90"
+      sizes="sm:50vw"
     />
   </section>
 </template>

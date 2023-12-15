@@ -9,6 +9,8 @@ defineProps(["title", "description", "image"]);
       class="md:absolute"
       width="2880"
       height="1264"
+      :quality="90"
+      sizes="sm:100vw"
     />
 
     <div

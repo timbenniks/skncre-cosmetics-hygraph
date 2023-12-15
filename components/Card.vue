@@ -13,6 +13,8 @@ defineProps(["image", "title", "url", "cta"]);
         provider="hygraph"
         class="absolute w-100 h-auto"
         loading="lazy"
+        :quality="90"
+        sizes="sm:100vw md:30vw"
       />
 
       <img

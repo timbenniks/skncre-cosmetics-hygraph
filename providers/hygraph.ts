@@ -5,7 +5,8 @@ type ImageOptimizations = {
   width?: number
   height?: number
   fit?: string | "clip" | "crop" | "scale" | "max"
-  format?: string | "jpg" | "png" | "webp" | "avif" | "auto_image"
+  format?: string | "jpg" | "png" | "webp" | "avif" | "auto_image",
+  quality?: number
 }
 
 export function getImageFormat(format?: string) {
@@ -23,16 +24,21 @@ export function optimizeHygraphImage(baseurl: string, url: string, optimizations
   const imageId = url.split(`${baseurl}/`)[1];
   const imageFormat = getImageFormat(optimizations.format)
   const optimBase = 'resize'
+  const quality = optimizations.quality ? `quality=value:${optimizations.quality}/compress/` : ''
 
   let optimList = [];
   for (const [key, value] of Object.entries(optimizations)) {
-    if (key !== 'format' && value !== undefined) {
-      optimList.push(`${key}:${value}`)
+    if (key !== 'format' && key !== 'quality' && value !== undefined) {
+      if (key === 'fit' && value === 'contain') {
+        optimList.push('fit:max')
+      } else {
+        optimList.push(`${key}:${value}`)
+      }
     }
   }
 
   const optim = `${optimBase}=${optimList.join(',')}`
-  const result = joinURL(baseurl, imageFormat, optim, imageId)
+  const result = joinURL(baseurl, imageFormat, optim, quality, imageId)
 
   return result;
 }
@@ -47,6 +53,7 @@ export const getImage: ProviderGetImage = (
     height,
     fit,
     format,
+    quality
   } = modifiers
 
   if (!baseurl) {
@@ -54,6 +61,6 @@ export const getImage: ProviderGetImage = (
   }
 
   return {
-    url: optimizeHygraphImage(baseurl, src, { width, height, fit, format })
+    url: optimizeHygraphImage(baseurl, src, { width, height, fit, format, quality })
   }
 }
