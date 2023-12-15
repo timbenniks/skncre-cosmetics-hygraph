@@ -2,7 +2,13 @@
 export default defineNuxtConfig({
   devtools: { enabled: false },
   modules: ['@nuxtjs/tailwindcss', 'nuxt-graphql-client', '@nuxtjs/google-fonts', '@nuxt/image'],
-
+  app: {
+    head: {
+      htmlAttrs: {
+        lang: 'en',
+      },
+    }
+  },
   routeRules: {
     '/': { isr: true },
     '/pdp/*': { isr: true },
