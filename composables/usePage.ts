@@ -11,22 +11,12 @@ export async function usePage(properties: Props) {
 
   let result: any;
 
-  if (properties.type === 'page') {
-    const { page } = await GqlPage({
-      slug: properties.slug, stage
-    });
+  const { data } = await useAsyncGql(properties.type === 'page' ? 'Page' : 'Pdp', {
+    slug: properties.slug, stage
+  });
 
-    result = page;
-  }
-
-  if (properties.type === 'pdp') {
-    const { pdp } = await GqlPdp({
-      slug: properties.slug, stage
-    });
-
-    result = pdp;
-  }
-
+  // @ts-ignore
+  result = properties.type === 'page' ? data.value.page : data.value.pdp
 
   if (!result) {
     throw createError({

@@ -12,6 +12,8 @@ In `.env` add and make sure to add content viewing permissions in Hygraph API se
 GQL_HOST=https://<HYGRAPH_CDN_LOCATION>.cdn.hygraph.com/content/<ID>/master
 ```
 
+See `.env.example` for the setup requirements.
+
 Add `.gql` query files in the `./queries` folder and use them like this:
 
 ```js
