@@ -9,14 +9,12 @@ export async function usePage(properties: Props) {
   const { $preview } = useNuxtApp();
   const stage = $preview ? "DRAFT" as Stage : "PUBLISHED" as Stage
 
-  let result: any;
-
   const { data } = await useAsyncGql(properties.type === 'page' ? 'Page' : 'Pdp', {
     slug: properties.slug, stage
   });
 
   // @ts-ignore
-  result = properties.type === 'page' ? data.value.page : data.value.pdp
+  const result = properties.type === 'page' ? data.value.page : data.value.pdp
 
   if (!result) {
     throw createError({

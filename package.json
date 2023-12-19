@@ -2,6 +2,8 @@
   "name": "skncre-cosmetics-hygraph",
   "private": false,
   "type": "module",
+  "version": "1.0",
+  "license": "MIT",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
