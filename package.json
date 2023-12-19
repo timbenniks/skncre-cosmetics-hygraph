@@ -1,6 +1,6 @@
 {
   "name": "skncre-cosmetics-hygraph",
-  "private": true,
+  "private": false,
   "type": "module",
   "scripts": {
     "build": "nuxt build",
