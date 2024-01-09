@@ -2,6 +2,7 @@
 const route = useRoute();
 const { slug } = route.params;
 const product = await usePage({ slug, type: "pdp" });
+useOgtags(product);
 </script>
 
 <template>
