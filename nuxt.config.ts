@@ -24,11 +24,7 @@ export default defineNuxtConfig({
   image: {
     providers: {
       hygraph: {
-        name: 'hygraph',
-        provider: '~/providers/hygraph.ts',
-        options: {
-          baseurl: "https://media.graphassets.com"
-        }
+        baseurl: "https://media.graphassets.com"
       }
     }
   }
